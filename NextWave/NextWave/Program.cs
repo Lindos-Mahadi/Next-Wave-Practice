@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using NextWave.Models;
+
 namespace NextWave
 {
     public class Program
@@ -5,6 +8,18 @@ namespace NextWave
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Retrieve connection string from appsettings.json
+            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            // Add DatabaseContext to the DI container
+            builder.Services.AddDbContext<NextWaveDbContext>(options =>
+                options.UseSqlServer(connectionString));
+
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

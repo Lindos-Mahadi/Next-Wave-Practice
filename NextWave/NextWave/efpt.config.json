@@ -1,0 +1,153 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "NextWaveDbContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "NextWave",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[ASIC_TXN_File]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ASIC_TXN_STATUS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[companysearch]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LBLmsg]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lodgement]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RA55]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RA56]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Registration]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Share_Allocate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Share_distribute_grid]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[step1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[step2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[step3]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[step4_anothershareholder]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Company]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_CompanyAddress]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_CompanyDirector]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_CompanyShare]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_CompanyTrust]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Contact]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Options]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Transaction]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Trust]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_TrustAppointer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_TrustOption]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_User]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_UserMeta]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[temp_csearch]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "shahed.comdeedtesting.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
