@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetContactList")",
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (req, status, error) {
+                    console.log(status);
+                }
+            });
+
+        });
+    </script>
+}
