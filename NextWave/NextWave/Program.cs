@@ -43,7 +43,7 @@ namespace NextWave
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Demo}/{action=Index}/{id?}");
 
             app.Run();
         }

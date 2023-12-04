@@ -1,0 +1,161 @@
+﻿@model IEnumerable<NextWave.Models.TblCompany>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameReserved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Abn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyPurpose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyUseFor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Registered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Smsfdeclaration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteForTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LegalAssessment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowingReview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agreement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanySecretary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublicOfficerOfCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HowfstmeetingOfDirheld)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfIncorporation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameReserved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Abn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyPurpose)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyUseFor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Registered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Smsfdeclaration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuoteForTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LegalAssessment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowingReview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agreement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanySecretary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublicOfficerOfCompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HowfstmeetingOfDirheld)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfIncorporation)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
