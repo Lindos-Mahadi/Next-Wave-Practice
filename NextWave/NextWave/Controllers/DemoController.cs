@@ -14,8 +14,7 @@ namespace NextWave.Controllers
         // GET: DemoController
         public ActionResult Index()
         {
-            var addressList = _demoContext.TblCompanies.ToList();
-            return View(addressList);
+            return View();
         }
         [HttpGet]
         public IActionResult GetCompanyData()
