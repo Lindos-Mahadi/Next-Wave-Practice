@@ -1,25 +1,51 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
     ViewData["Title"] = "Index";
 }
 
-
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css" />
+<div class="container">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="customerDatatable" class="table table-striped table-bordered dt-responsive nowrap"></table>
+    </div>
+</div>
 
 @section Scripts{
+    <script src="~/lib/datatables/js/datatables.bootstrap.min.js"></script>
+    <script src="~/lib/datatables/js/datatables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function () {
-
-            $.ajax({
-                type: "GET",
-                url: "@Url.Action("GetContactList")",
-                dataType: "json",
-                success: function (response) {
-                    console.log(response);
+            $('#customerDatatable').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "filter": true,
+                "searching": true,
+                "paging": true,
+                "info": true,
+                "ordering": true,
+                "responsive": true,
+                "lengthChange": true,
+                "ajax": {
+                    "url": "/TblContact/GetContactList",
+                    "type": "GET",
+                    "dataType": "json",
                 },
-                error: function (req, status, error) {
-                    console.log(status);
-                }
+                "columns": [
+                    { "data": "Id", "title": "ID" },
+                    { "data": "Name", "title": "Name" },
+                    { "data": "Email", "title": "Email" },
+                    //{ "data": "Message", "title": "Message" },
+                    { "data": "Status", "title": "Status" },
+                    { "data": "Subject", "title": "Subject" },
+                    { "data": "AddedDate", "title": "Added Date" }
+                ],
+                "order": [
+                    [0, 'asc'] // Sort by the first column in ascending order
+                ]
             });
-
         });
     </script>
 }
