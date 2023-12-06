@@ -3,31 +3,28 @@
 
     ViewData["Title"] = "Index";
 }
+<style>
+    .custom-subject-header {
+        color: green;
+        font-weight: bold;
+        width: 50px !important; /* Adjust the width as needed */
+    }
+</style>
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" />
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css" />
-<div class="container">
-    <br />
-    <div style="width:90%; margin:0 auto;">
-        <table id="customerDatatable" class="table table-striped table-bordered dt-responsive nowrap"></table>
+<div class="container-fluid">
+    <div>
+        <table id="customerDatatable" class="table table-striped table-bordered border-top table-hover"></table>
     </div>
 </div>
 
 @section Scripts{
-    <script src="~/lib/datatables/js/datatables.bootstrap.min.js"></script>
-    <script src="~/lib/datatables/js/datatables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#customerDatatable').DataTable({
                 "processing": true,
-                "serverSide": true,
+                "serverSide": false,
                 "filter": true,
-                "searching": true,
-                "paging": true,
-                "info": true,
-                "ordering": true,
-                "responsive": true,
-                "lengthChange": true,
+                "orderMulti": true,
                 "ajax": {
                     "url": "/TblContact/GetContactList",
                     "type": "GET",
@@ -37,14 +34,29 @@
                     { "data": "Id", "title": "ID" },
                     { "data": "Name", "title": "Name" },
                     { "data": "Email", "title": "Email" },
-                    //{ "data": "Message", "title": "Message" },
+                    //{ "data": "Message", "title": "Message", "autoWidth": true },
                     { "data": "Status", "title": "Status" },
                     { "data": "Subject", "title": "Subject" },
                     { "data": "AddedDate", "title": "Added Date" }
                 ],
-                "order": [
-                    [0, 'asc'] // Sort by the first column in ascending order
-                ]
+                "columnDefs": [
+                    {
+                        // Target the "Subject" column (zero-based index)
+                        "targets": 4,
+                        // Apply custom styles
+                        "render": function (data, type, row, meta) {
+                            // You can customize the styling here
+                            return '<span style="color: red; font-weight: bold;">' + data + '</span>';
+                        }
+                    }
+                ],
+                "headerCallback": function (thead, data, start, end, display) {
+                    // Apply styles to the header cell for the "Subject" column
+                    var subjectHeaderCell = $(thead).find('th:eq(4)'); // Assuming "Subject" is the fifth column (zero-based index)
+                    //subjectHeaderCell.addClass("custom-subject-header");
+                    $(thead).find('th').addClass("custom-subject-header");
+                }
+
             });
         });
     </script>
